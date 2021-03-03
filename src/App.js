@@ -1,15 +1,10 @@
 import { Link, Route, Switch } from 'react-router-dom';
 import Category from './Category';
+import Products from './Products';
 
 const Home = () => (
 	<div>
 		<h2>Home</h2>
-	</div>
-);
-
-const Products = () => (
-	<div>
-		<h2>Products</h2>
 	</div>
 );
 
@@ -57,14 +52,14 @@ export default function App() {
 
 // ! Implicit Passing of Props
 /**
- * old ver.
+ * ? old ver.
  * <Route exact path="/" component={Home} />
  * return 
   { history: { ... }
   location: { ... }
   match: { ... } }
 	
- * new v5 <
+ * ? new v5
  * <Route exact path="/"><Home /></Route>
  * return
  * {}
@@ -75,9 +70,4 @@ export default function App() {
 // ! Switch Components
 /**
  * <Switch> components is only the first child <Route> that matches the location gets rendered.
- */
-
-// ! Dynamic Nested Routing
-/**
- * example = "/category/shoes"
  */

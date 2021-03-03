@@ -33,8 +33,15 @@ export default function Category() {
 
 // ! Dynamic Nested Routing
 /**
- * 1. useRouteMatch hooks
- *  * Access to the `match` object
- *  * `match.url` will be used for building nested links
- *  * `match.path` for nested routes
+ * * example = "/category/shoes"
+ * 
+/**
+ * 1. useRouteMatch hook
+ *  * Access to the `match` object.
+ *  * `match.url` will be used for building nested links.
+ *  * `match.path` for nested routes.
+ * 
+ * 2. useParams hook
+ * * we’re using the useParams hook, 
+ * * which returns an object of key/value pairs of URL parameters.
  */
