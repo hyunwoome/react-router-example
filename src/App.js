@@ -34,15 +34,20 @@ export default function App() {
 					</li>
 				</ul>
 			</nav>
-			<Route exact path="/">
-				<Home />
-			</Route>
-			<Route path="/category">
-				<Category />
-			</Route>
-			<Route path="/products">
-				<Products />
-			</Route>
+			<Switch>
+				<Route exact path="/">
+					<Home />
+				</Route>
+				<Route path="/category">
+					<Category />
+				</Route>
+				<Route path="/products">
+					<Products />
+				</Route>
+				<Route path="/:id">
+					<p>This text will render for any route other than '/'</p>
+				</Route>
+			</Switch>
 		</>
 	);
 }
@@ -70,4 +75,9 @@ export default function App() {
  * {}
  * 
  * * Use a hook instead of the old version !!
+ */
+
+// ! Switch Components
+/**
+ * <Switch> components is only the first child <Route> that matches the location gets rendered.
  */
