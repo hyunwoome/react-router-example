@@ -1,10 +1,18 @@
 import { Link, Route, Switch } from 'react-router-dom';
 import Category from './Category';
 import Products from './Products';
+import Login from './Login';
+import PrivateRoute from './PrivateRoute';
 
 const Home = () => (
 	<div>
 		<h2>Home</h2>
+	</div>
+);
+
+const Admin = () => (
+	<div>
+		<h2>Welcome Admin!</h2>
 	</div>
 );
 
@@ -22,6 +30,9 @@ export default function App() {
 					<li>
 						<Link to="/products">Products</Link>
 					</li>
+					<li>
+						<Link to="/admin">Admin area</Link>
+					</li>
 				</ul>
 			</nav>
 			<Switch>
@@ -34,6 +45,11 @@ export default function App() {
 				<Route path="/products">
 					<Products />
 				</Route>
+				<Route path="/login">
+					<Login />
+				</Route>
+				{/* 커스텀 라우트에서 렌더링하는 component는 보호받아야할 컴포넌트 전달 (여기선 Admin) */}
+				<PrivateRoute path="/admin" component={Admin} />
 				<Route path="/:id">
 					<p>This text will render for any route other than '/'</p>
 				</Route>
@@ -71,3 +87,5 @@ export default function App() {
 /**
  * <Switch> components is only the first child <Route> that matches the location gets rendered.
  */
+
+// ! Implementing the Protected Route
