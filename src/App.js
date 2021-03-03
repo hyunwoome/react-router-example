@@ -1,14 +1,9 @@
 import { Link, Route, Switch } from 'react-router-dom';
+import Category from './Category';
 
 const Home = () => (
 	<div>
 		<h2>Home</h2>
-	</div>
-);
-
-const Category = () => (
-	<div>
-		<h2>Category</h2>
 	</div>
 );
 
@@ -80,4 +75,9 @@ export default function App() {
 // ! Switch Components
 /**
  * <Switch> components is only the first child <Route> that matches the location gets rendered.
+ */
+
+// ! Dynamic Nested Routing
+/**
+ * example = "/category/shoes"
  */
