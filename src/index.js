@@ -12,14 +12,13 @@ ReactDOM.render(
 	document.getElementById('root'),
 );
 
-// ! react-router
-/* 
-
-history API = <BrowserRouter>
-history.push = <Link>
-history.replace = <Redirect>
-
-<Route> => Matched re-rendered
-<Link> => Navigation (without refresh)
-<a> => Navigation (refresh)
-*/
+// ! react-router basic
+/**
+ * history API = <BrowserRouter>
+ * history.push = <Link>
+ * history.replace = <Redirect>
+ *
+ * <Route> => Matched re-rendered
+ * <Link> => Navigation (without refresh)
+ * <a> => Navigation (refresh)
+ */

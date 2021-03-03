@@ -46,3 +46,28 @@ export default function App() {
 		</>
 	);
 }
+
+// ! Path and Match
+/**
+ * match.url: 		for nested <Link> components.
+ * match.path: 		for nested <Route> components.
+ * match.isExact: return to Boolean.
+ * match.params:  URL parsed to key/value containing object.
+ */
+
+// ! Implicit Passing of Props
+/**
+ * old ver.
+ * <Route exact path="/" component={Home} />
+ * return 
+  { history: { ... }
+  location: { ... }
+  match: { ... } }
+	
+ * new v5 <
+ * <Route exact path="/"><Home /></Route>
+ * return
+ * {}
+ * 
+ * * Use a hook instead of the old version !!
+ */
